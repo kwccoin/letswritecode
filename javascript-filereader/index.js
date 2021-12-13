@@ -3,10 +3,11 @@ function handleFiles (files) {
   console.log(files)
   const reader = new FileReader()
   reader.onload = function () {
-    // const lines = reader.result.split('\n').map(function (line) {
-    //   return line.split(',')
-    // })
-    // console.log(lines)
+    const lines = reader.result.split('\n').map(function (line) {
+    return line.split(',')
+    })
+    console.log(lines)
+    /*
     const img = new Image()
     img.onload = function () {
       const canvas = document.createElement('canvas')
@@ -24,8 +25,8 @@ function handleFiles (files) {
       context.putImageData(imageData, 0, 0)
 
       document.body.appendChild(canvas)
-      //canvas.toDataURL()
-      //const csvfile = new Blob(['one,two,three'], { type: 'text/csv' })
+      canvas.toDataURL()
+      const csvfile = new Blob(['one,two,three'], { type: 'text/csv' })
       canvas.toBlob(function (blob) {
         const form = new FormData()
         form.append('image', blob, 'moody.jpg')
@@ -36,10 +37,13 @@ function handleFiles (files) {
     }
     img.src = reader.result
     //document.body.appendChild(img)
-  }
-  //reader.readAsText(files[0])
-  reader.readAsDataURL(files[0])
+    */
+  } 
+  
+  reader.readAsText(files[0])
+  // reader.readAsDataURL(files[0])
 }
+
 
 input.addEventListener('change', function (e) {
   handleFiles(input.files)
