@@ -11,4 +11,4 @@ Then run `npm start` to run the app viewable on `http://localhost:9966`.
 
 ——
 
-With some minor changes (use index instead of bundle,js, it can run under working copy fir the CS3 abd the image (original). 
+With some minor changes (use index instead of bundle,js,  it can run under working copy fir the CS3 abd the image (original). 

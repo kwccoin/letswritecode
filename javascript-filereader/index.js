@@ -7,6 +7,7 @@ function handleFiles (files) {
     return line.split(',')
     })
     console.log(lines)
+    console.log(lines[0])
     /*
     const img = new Image()
     img.onload = function () {
@@ -39,9 +40,10 @@ function handleFiles (files) {
     //document.body.appendChild(img)
     */
   } 
-  
+  // either one not both 
   reader.readAsText(files[0])
-  // reader.readAsDataURL(files[0])
+  // not work reader.readAsText({"0":{}}) need blob
+  // just ... // reader.readAsDataURL(files[0])
 }
 
 
