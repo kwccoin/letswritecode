@@ -1,3 +1,44 @@
+fetch('index-2.txt')
+
+  .then(response => response.text())
+
+  .then(data => {
+
+    // Do something with your data
+
+    console.log(data);
+
+  });
+  
+
+fetch('index-2.txt')
+
+  .then(response => response.text())
+
+  .then(text => console.log(text))
+  
+
+const fileList = ["index-2.txt"]// event.target.files;
+
+let fileContent = "";
+
+const 
+fr = new FileReader();
+
+fr.onload = () => {
+
+  fileContent = fr.result;
+
+  console.log('Commands', fileContent);
+
+}
+
+fr.readAsText(fileList[0]);
+
+
+
+/* 
+
 const input = document.querySelector('input[type="file"]')
 
 function handleFiles (files) {
@@ -10,7 +51,9 @@ function handleFiles (files) {
     })
     console.log(lines)
     console.log(lines[0])
-    /*
+    
+    // -- inner comment start 
+    / *
     const img = new Image()
     img.onload = function () {
       const canvas = document.createElement('canvas')
@@ -40,11 +83,10 @@ function handleFiles (files) {
     }
     img.src = reader.result
     //document.body.appendChild(img)
-    */
+    / * 
+    // -- inner comment end 
   } 
   // either one not both 
-  console.log(files) // {"0":{})
-  console.log(files[0]) // {} ?
   reader.readAsText(files[0])
   // not work reader.readAsText({"0":{}}) need blob
   // just ... // reader.readAsDataURL(files[0])
@@ -52,7 +94,7 @@ function handleFiles (files) {
   
   // As with JSON, use the Fetch API & ES6
 
-fetch('index-2.txt')
+fetch('something.txt')
 
   .then(response => response.text())
 
@@ -80,3 +122,8 @@ document.addEventListener('drop', function (e) {
   e.stopPropagation()
   handleFiles(e.dataTransfer.files)
 }, false)
+
+*/ 
+
+// https://www.codegrepper.com/code-examples/javascript/read+file+javascript
+
