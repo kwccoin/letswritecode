@@ -1,3 +1,11 @@
+<img src="bear.jpg" id="spaceship">
+
+var image = new Image(); image.src = "spaceship.png";
+
+
+
+
+
 fetch('index-2.txt')
 
   .then(response => response.text())
