@@ -10,6 +10,8 @@ my_object = {
 };
 
 my_object.name = "bella";
+
+console.log("universal, one, system, public-private-join-common-share")
             
 console.log("martin rinehart js oo")
 console.log("Graeme Stuart intro js dev ground up")
