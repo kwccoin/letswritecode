@@ -19,7 +19,7 @@ console.log(my_object);
 console.log(" "+my_object); // use chrome engine
 console.log(my_object.speak); // 1st ignore 2nd undefined
 console.log(my_object.speak()); // no self but this
-console.log("------------------");
+console.log("1------------------");
 
 function MyObj  (name, size, color, speak) {
   var newMyObj = this;
@@ -40,7 +40,14 @@ MyObj.prototype.toString = function() { return 'ext some info is size:' + this.s
 console.log(my_object2);
 console.log(" "+my_object2); // use chrome engine
 //console.log(my_object2.speak); // 1st ignore 2nd undefined
-console.log(my_object2.speak()); // no self
+console.log(my_object2.speak()); // no self but this
 
+console.log("2----------------- -");
+
+MyObj.x = "xx";
+console.log(my_object2.x);
+
+MyObj.prototype.x = "xx";
+console.log(my_object2.x);
 
 }
