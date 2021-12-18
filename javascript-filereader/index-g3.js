@@ -139,8 +139,8 @@ context.strokeText("This is stroked in 16pt Arial...", 120, 510);
 
 // TEXTURES // Get a handle to the Image object 
 
-*/
 
+*/
 
 //var scrdumpImage = document.getElementById("1scrdump"); 
 // var pattern = context.createPattern(scrdumpImage, "repeat");
@@ -151,6 +151,9 @@ context.strokeText("This is stroked in 16pt Arial...", 120, 510);
 // Draw a pattern filled rectangle 
 // context.fillRect(420, 240, 130, 50);
 
+// https://www.quora.com/How-do-you-make-a-hidden-image-in-HTML use 
+// The trick to hiding any element on your web page is to insert either a " display: none; " or " visibility: hidden; " rule for that element. The " display: none; " rule not only hides the element, but also removes it from the document flow
+
 var xmasboxImage = document.getElementById("xmasbox");
 // examp use png ... ("xmasbox");
 // type error("1scrdump"); 
@@ -158,13 +161,31 @@ var xmasboxImage = document.getElementById("xmasbox");
 console.log(xmasboxImage);
 
 // Draw the image at (0, 350) 
+context.translate(350, 100);
+context.rotate(Math.PI/3);
 context.drawImage(xmasboxImage, 5, 5);
 
 // Scale the image to half the original size 
-context.drawImage(xmasboxImage, 10, 200, 50, 25);
+context.drawImage(xmasboxImage, 10, 200, 500, 250);
 
 // Draw part of the image 
-context.drawImage(xmasboxImage, 0, 0, 160, 150, 100, 100, 80, 75);
+context.drawImage(xmasboxImage, 0, 0, 160, 150, 100, 100, 320, 300);
 
 
+
+// no code it will still draw the image ...
+
+
+
+
+// ROTATION AND TRANSLATION
+//Translate origin to location of object
+context.translate(250, 370);
+//Rotate about the new origin by 60 degrees
+context.rotate(Math.PI / 2);
+context.drawImage(xmasboxImage, 0, 0, 60, 50, -30, -25, 800, 480);
+//Restore to original state by rotating and translating back
+//context.rotate(-Math.PI / 3);
+//context.translate(-240, -370);
+context.translate(-240, -370);
 }
