@@ -1,11 +1,4 @@
-<!DOCTYPE html> 
-
-<html>    
-
-<head>        
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">        
-<title>Sample HTML5 File</title>        
-<script type="text/javascript">            // This function will be called once the page loads completely            
+// This function will be called once the page loads completely            
 
 function pageLoaded(){                
 
@@ -154,30 +147,3 @@ context.fillRect(420, 240, 130, 50);
 
 
 }
-</script>        
-
-</head>    
-
-<body onload="pageLoaded();">    
-
-// note event
-<p>
-
-<canvas width="480" height="640" id="testcanvas" style="border: 1px solid black;">        
-appear onky if canvas tag cannot be intreret Your browser does not support HTML5 Canvas. Please shift to a newer browser.    
-</canvas>
-
-<p>
-	
-
-<img src="image.png" id="fire">
-
-// The code in Listing 1-7 will draw
-
-<dennis>
-haha
-</dennis>
-
-</body> 
-
-</html>

@@ -42,12 +42,14 @@ console.log(" "+my_object2); // use chrome engine
 //console.log(my_object2.speak); // 1st ignore 2nd undefined
 console.log(my_object2.speak()); // no self but this
 
-console.log("2----------------- -");
+console.log("2-----------------");
 
 MyObj.x = "xx";
 console.log(my_object2.x);
 
 MyObj.prototype.x = "xx";
 console.log(my_object2.x);
+
+console.log("3-----------------");
 
 }
