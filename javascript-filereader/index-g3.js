@@ -16,6 +16,8 @@ var context = canvas.getContext("2d");
 
 // Our drawing code here...
 
+/*
+
 // FILLED RECTANGLES 
 // Draw a solid square with width and height of 100 pixels at (200,10) 
 context.fillRect(200, 10, 100, 100); 
@@ -136,14 +138,33 @@ context.strokeText("This is stroked in 16pt Arial...", 120, 510);
 // Figure 1-3. Drawing complex shapes inside the canvas
 
 // TEXTURES // Get a handle to the Image object 
-var fireImage = document.getElementById("fire"); 
-var pattern = context.createPattern(fireImage, "repeat");
+
+*/
+
+
+//var scrdumpImage = document.getElementById("1scrdump"); 
+// var pattern = context.createPattern(scrdumpImage, "repeat");
 
 // Set fill style to newly created pattern 
-context.fillStyle = pattern; 
+// context.fillStyle = pattern; 
 
 // Draw a pattern filled rectangle 
-context.fillRect(420, 240, 130, 50);
+// context.fillRect(420, 240, 130, 50);
+
+var xmasboxImage = document.getElementById("xmasbox");
+// examp use png ... ("xmasbox");
+// type error("1scrdump"); 
+
+console.log(xmasboxImage);
+
+// Draw the image at (0, 350) 
+context.drawImage(xmasboxImage, 5, 5);
+
+// Scale the image to half the original size 
+context.drawImage(xmasboxImage, 10, 200, 50, 25);
+
+// Draw part of the image 
+context.drawImage(xmasboxImage, 0, 0, 160, 150, 100, 100, 80, 75);
 
 
 }
