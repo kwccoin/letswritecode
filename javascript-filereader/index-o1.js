@@ -1,4 +1,40 @@
+import {sc, cl, debug} from "./logging.js"
+// notsure include "logging.js"
+
+pageLoaded();
+
 function pageLoaded() {
+
+// chp 2
+
+var sum = function (old_object, new_object) {
+    var ret = {};
+    for (var prop in old_object) {
+            ret[prop] = old_object[prop]; }
+    for (prop in new_object) {
+            ret[prop] = new_object[prop]; }
+    return ret;
+} // end: sum()
+
+function Dog(name, breed) {
+	this.name = name;
+	if (breed) {
+		this.breed = breed;
+	}
+}
+
+var bellaM1= new Dog("Bella","Mixed"); 
+
+
+
+console.log("chapter 2")
+
+cl(bellaM1);
+
+
+// chpt1 
+
+/*
 
 my_object = {    
     // name: 'bella',
@@ -51,5 +87,7 @@ MyObj.prototype.x = "xx";
 console.log(my_object2.x);
 
 console.log("3-----------------");
+
+*/
 
 }
